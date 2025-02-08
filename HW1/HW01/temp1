@@ -1,0 +1,67 @@
+
+linker3.o:	file format mach-o arm64
+
+Disassembly of section __TEXT,__text:
+
+0000000000000000 <ltmp0>:
+       0: d10103ff     	sub	sp, sp, #64
+       4: a9027bfd     	stp	x29, x30, [sp, #32]
+       8: 910083fd     	add	x29, sp, #32
+       c: 52800140     	mov	w0, #10
+      10: b90013a0     	str	w0, [x29, #16]
+      14: 94000000     	bl	0x14 <ltmp0+0x14>
+      18: b90017a0     	str	w0, [x29, #20]
+      1c: b94013a0     	ldr	w0, [x29, #16]
+      20: b94017a1     	ldr	w1, [x29, #20]
+      24: 94000000     	bl	0x24 <ltmp0+0x24>
+      28: b9001fa0     	str	w0, [x29, #28]
+      2c: b94013a0     	ldr	w0, [x29, #16]
+      30: b94017a1     	ldr	w1, [x29, #20]
+      34: b9401fa2     	ldr	w2, [x29, #28]
+      38: b90013e2     	str	w2, [sp, #16]
+      3c: b9000be1     	str	w1, [sp, #8]
+      40: b90003e0     	str	w0, [sp]
+      44: 90000000     	adrp	x0, 0x0 <ltmp0+0x44>
+      48: 91000000     	add	x0, x0, #0
+      4c: 94000000     	bl	0x4c <ltmp0+0x4c>
+      50: 52800000     	mov	w0, #0
+      54: a9427bfd     	ldp	x29, x30, [sp, #32]
+      58: 910103ff     	add	sp, sp, #64
+      5c: d65f03c0     	ret
+
+Disassembly of section __TEXT,__cstring:
+
+0000000000000060 <ltmp1>:
+      60: 74206425     	<unknown>
+      64: 6874206f     	<unknown>
+      68: 6f702065     	umlal2.4s	v5, v3, v0[3]
+      6c: 20726577     	<unknown>
+      70: 3d206425     	str	b5, [x1, #2073]
+      74: 0a642520     	bic	w0, w9, w4, lsr #9
+      78: 00           	<unknown>
+
+Disassembly of section __TEXT,__eh_frame:
+
+0000000000000080 <ltmp2>:
+      80: 00000014     	udf	#20
+      84: 00000000     	udf	#0
+      88: 00527a03     	<unknown>
+      8c: 011e7801     	<unknown>
+      90: 001f0c10     	<unknown>
+      94: 00000000     	udf	#0
+      98: 0000003c     	udf	#60
+      9c: 0000001c     	udf	#28
+      a0: ffffffe0     	<unknown>
+      a4: ffffffff     	<unknown>
+      a8: 00000060     	udf	#96
+      ac: 00000000     	udf	#0
+      b0: 00040400     	<unknown>
+      b4: 400e0000     	<unknown>
+      b8: 00000404     	udf	#1028
+      bc: 9e049d00     	<unknown>
+      c0: 00040403     	<unknown>
+      c4: 1d0c0000     	<unknown>
+      c8: 00500420     	<unknown>
+      cc: dedd0000     	<unknown>
+      d0: 00001f0c     	udf	#7948
+      d4: 00000000     	udf	#0

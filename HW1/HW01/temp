@@ -1,0 +1,88 @@
+
+a.out:	file format mach-o arm64
+
+Disassembly of section __TEXT,__text:
+
+0000000100003f04 <_main>:
+100003f04: d10143ff    	sub	sp, sp, #80
+100003f08: a9027bfd    	stp	x29, x30, [sp, #32]
+100003f0c: 910083fd    	add	x29, sp, #32
+100003f10: 52800140    	mov	w0, #10
+100003f14: b90023a0    	str	w0, [x29, #32]
+100003f18: 52800040    	mov	w0, #2
+100003f1c: b90027a0    	str	w0, [x29, #36]
+100003f20: b94023a0    	ldr	w0, [x29, #32]
+100003f24: 1e620000    	scvtf	d0, w0
+100003f28: b94027a0    	ldr	w0, [x29, #36]
+100003f2c: 1e620001    	scvtf	d1, w0
+100003f30: 94000010    	bl	0x100003f70 <_printf+0x100003f70>
+100003f34: 1e780000    	fcvtzs	w0, d0
+100003f38: b9002fa0    	str	w0, [x29, #44]
+100003f3c: b94023a0    	ldr	w0, [x29, #32]
+100003f40: b94027a1    	ldr	w1, [x29, #36]
+100003f44: b9402fa2    	ldr	w2, [x29, #44]
+100003f48: b90013e2    	str	w2, [sp, #16]
+100003f4c: b9000be1    	str	w1, [sp, #8]
+100003f50: b90003e0    	str	w0, [sp]
+100003f54: 90000000    	adrp	x0, 0x100003000 <_main+0x50>
+100003f58: 913e2000    	add	x0, x0, #3976
+100003f5c: 94000008    	bl	0x100003f7c <_printf+0x100003f7c>
+100003f60: 52800000    	mov	w0, #0
+100003f64: a9427bfd    	ldp	x29, x30, [sp, #32]
+100003f68: 910143ff    	add	sp, sp, #80
+100003f6c: d65f03c0    	ret
+
+Disassembly of section __TEXT,__stubs:
+
+0000000100003f70 <__stubs>:
+100003f70: b0000010    	adrp	x16, 0x100004000 <__stubs+0x4>
+100003f74: f9400210    	ldr	x16, [x16]
+100003f78: d61f0200    	br	x16
+100003f7c: b0000010    	adrp	x16, 0x100004000 <__stubs+0x10>
+100003f80: f9400610    	ldr	x16, [x16, #8]
+100003f84: d61f0200    	br	x16
+
+Disassembly of section __TEXT,__cstring:
+
+0000000100003f88 <__cstring>:
+100003f88: 74206425    	<unknown>
+100003f8c: 6874206f    	<unknown>
+100003f90: 6f702065    	umlal2.4s	v5, v3, v0[3]
+100003f94: 20726577    	<unknown>
+100003f98: 3d206425    	str	b5, [x1, #2073]
+100003f9c: 0a642520    	bic	w0, w9, w4, lsr #9
+100003fa0: 00          	<unknown>
+
+Disassembly of section __TEXT,__eh_frame:
+
+0000000100003fa8 <__eh_frame>:
+100003fa8: 00000014    	udf	#20
+100003fac: 00000000    	udf	#0
+100003fb0: 00527a03    	<unknown>
+100003fb4: 011e7801    	<unknown>
+100003fb8: 001f0c10    	<unknown>
+100003fbc: 00000000    	udf	#0
+100003fc0: 0000003c    	udf	#60
+100003fc4: 0000001c    	udf	#28
+100003fc8: ffffff3c    	<unknown>
+100003fcc: ffffffff    	<unknown>
+100003fd0: 0000006c    	udf	#108
+100003fd4: 00000000    	udf	#0
+100003fd8: 00040400    	<unknown>
+100003fdc: 500e0000    	adr	x0, #114690
+100003fe0: 00000404    	udf	#1028
+100003fe4: 9e069d00    	<unknown>
+100003fe8: 00040405    	<unknown>
+100003fec: 1d0c0000    	<unknown>
+100003ff0: 005c0430    	<unknown>
+100003ff4: dedd0000    	<unknown>
+100003ff8: 00001f0c    	udf	#7948
+100003ffc: 00000000    	udf	#0
+
+Disassembly of section __DATA_CONST,__got:
+
+0000000100004000 <__got>:
+100004000: 00000000    	udf	#0
+100004004: 80100000    	<unknown>
+100004008: 00000001    	udf	#1
+10000400c: 80000000    	<unknown>
